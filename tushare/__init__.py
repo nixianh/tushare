@@ -1,4 +1,4 @@
-__version__ = '0.5.0'
+__version__ = '0.6.1'
 __author__ = 'Jimmy Liu'
 
 """
@@ -8,6 +8,7 @@ from tushare.stock.trading import (get_hist_data, get_tick_data,
                                    get_today_all, get_realtime_quotes,
                                    get_h_data, get_today_ticks,
                                    get_index, get_hists,
+                                   get_k_data,
                                    get_sina_dd)
 
 """
@@ -76,7 +77,8 @@ from tushare.util.dateu import (trade_cal, is_holiday)
 """
 for DataYes Token
 """
-from tushare.util.upass import (set_token, get_token)
+from tushare.util.upass import (set_token, get_token, get_broker,
+                                set_broker, remove_broker)
 
 from tushare.datayes.api import *
 
@@ -88,3 +90,14 @@ for fund data
 """
 from tushare.fund.nav import (get_nav_open, get_nav_close, get_nav_grading,
                               get_nav_history, get_fund_info)
+
+"""
+for trader API
+"""
+from tushare.trader.trader import TraderAPI
+
+
+"""
+for futures API
+"""
+from tushare.futures.intlfutures import (get_intlfuture)
